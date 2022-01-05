@@ -6,7 +6,7 @@
 <h5 align="center"> Projeto Goals - <a href="https://beacons.ai/murilonerdx/">Para acompanhar melhor todo progresso me siga nas redes sociais</a> (Beacons) </h5>
 
 <p align="center"> 
-<img src="https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_318915104_360067.jpg" alt="Metas" height="382px">
+<img src="https://www.incimages.com/uploaded_files/image/1920x1080/shutterstock_318915104_360067.jpg" alt="Metas" height="383px">
 </p>
 
 <p>Desenvolvi uma metrica para seguir, acompanhamento, e mostrar todo o progresso com base naquilo que foi indicado aqui. Todas as metas que forem concluidas serão exibidas com um simbolo de verificado.</p>
