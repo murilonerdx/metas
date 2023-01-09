@@ -1,7 +1,7 @@
 <p align="center"> 
   <img src="https://images-platform.99static.com//erEzc8DCZBsazNBwrk-3Kgosdx0=/1117x1227:1629x1739/fit-in/500x500/99designs-contests-attachments/91/91143/attachment_91143214" alt="Email Logo.png" width="80px" height="80px">
 </p>
-<h1 align="center"> Minhas metas para 2022 </h1>
+<h1 align="center"> Minhas metas para 2023 </h1>
 <h3 align="center"> Essas metas são pessoais, para desenvolvimento e aprimoramento de habilidades sociais, mas também em conhecimento tecnico e conhecimento logico para um progresso pessoal. Todas essas metas são planejadas para que eu possa em um futuro fazer uma pós graduação e também metas como me mudar para Portugal etc...</h3>
 <h5 align="center"> Projeto Goals - <a href="https://beacons.ai/murilonerdx/">Para acompanhar melhor todo progresso me siga nas redes sociais</a> (Beacons) </h5>
 
@@ -18,6 +18,7 @@
 <ul>
   <li><b>Aprender inglês</b> - Pretendo continuar meu curso de inglês e me ficar fluente, para que eu consiga viajar sem precisar de um tradutor, ou até mesmo me mudar para o interior em um futuro proximo. Em tecnologia basicamente é muito importante ter inglês.</li>
   <li><b>Fazer uma pós-graduação</b> - Uma pos pode ajudar a desenvolver mais e se especializar mais dando um leque de oportunidades na carreira</li>
+  <li><b>Voltar a ler</b> - Pretendo voltar a ler livros de historias e estudos para me desenvolver melhor.</li>
 </ul>
 
 <h4>Desenvolvimento profissional:</h4>
@@ -26,10 +27,10 @@
 <p align="center"> 
 <img src="https://miro.medium.com/max/2000/1*lgtguydPY4E97v3OrfeDnA.png" alt="Roadmap">
 </p>
-  
+   <li><b>Me especializar em FULL-STACK </b> - Abrir leque de conhecimento para outras areas do conhecimento..</li>
   
   <li><b>Aprender Kotlin</b> - Esse ano tenho um trabalho de iniciação ciêntifica com alguns amigos que requisitam de conhecimentos em Kotlin e desenvolvimento Mobile, e por esse motivo eu quero aprender kotlin usando android studio e me desenvolvendo para ter um conhecimento basico no assunto.</li>
-  <li><b>Aprender Blender</b> - Desenvolver uma habilidade em Blender é interessante pois você pode desenvolver seu proprio Rig e personagens, como ambientes, cenarios, ferramentas e outras diversas coisas, e pelo fato de blender ser muito importante no mercado de aprender juntamente com Unity, eu tenho esse interesse</li>
+  <li><b>Aprender React/Angular/Vue</b> - Aprender e espandir conhecimento nas areas do conhecimento de frontend para conseguir projetar minhas ideias</li>
 </ul>
 
 <h4>Aprender outros bancos e uma linguagem front-end:</h4>
