@@ -425,33 +425,59 @@ public class Service {
 Nesse exemplo, o método "doSomething" usa um OAuth2RestTemplate do Spring para fazer uma solicitação HTTP a uma API protegida. O OAuth2RestTemplate é configurado com as credenciais de autenticação e é usado para fazer a solicitação. Dessa forma, a autenticação é gerenciada de forma
 <hr>
 
-1.  Event Driven - é um modelo de programação onde a comunicação entre componentes é baseada em eventos, onde um componente dispara um evento que é recebido e processado por outro componente.
-2.  Event Notification Pattern - é um padrão de design onde um objeto registra-se para receber notificações quando um evento ocorre.
-3.  Event Carried State Transfer Pattern - é um padrão de design onde o estado do objeto é incluído no evento, permitindo que outros componentes recuperem o estado sem acessar diretamente o objeto.
-4.  API Gateway Pattern - é um padrão de design onde um único ponto de entrada é usado para acessar várias APIs. O gateway pode executar tarefas como autenticação, autorização, balanceamento de carga e caching.
-5.  API Composition Pattern - é um padrão de design onde várias APIs são combinadas para criar uma API unificada.
-6.  SAGA Pattern - é um padrão de design para controlar transações distribuídas em sistemas distribuídos.
-7.  Cross-Cutting - é um termo usado para descrever funcionalidades que são comuns a várias partes de um sistema, como autenticação e autorização.
-8.  Service Registry Discovery - é um padrão de design onde um registro central de serviços é mantido e consultado para descobrir serviços disponíveis em um sistema distribuído.
-9.  Global Configuration - é um padrão de design onde as configurações do sistema são armazenadas em um local central e compartilhadas por todos os componentes do sistema.
-10.  Circuit Breaker - é um padrão de design para lidar com falhas em sistemas distribuídos, onde um componente verifica se um serviço está disponível e, se não estiver, o circuit breaker interrompe temporariamente o acesso ao serviço.
-11.  Retry - é um padrão de design onde uma operação falha, mas é tentada novamente em um período de tempo determinado.
-12.  Log Aggregation - é um padrão de design onde logs de vários componentes de um sistema são coletados e agregados em um local central.
-13.  Controle de Métricas - é um padrão de design onde as métricas de desempenho são coletadas e monitoradas para detectar possíveis problemas no sistema.
-14.  Padrão JWT Autenticação - é um padrão de design de autenticação baseado em tokens JWT (JSON Web Tokens).
-15.  Modelos Autorização - são modelos de autorização usados para controlar o acesso a recursos em sistemas distribuídos.
-16.  Database per Service - é um padrão de design onde cada serviço possui seu próprio banco de dados.
-17.  Shared Database - é um padrão de design onde vários serviços compartilham o mesmo banco de dados.
-18.  API RESTful - é um estilo arquitetural para sistemas distribuídos que utiliza o protocolo HTTP e a abordagem CRUD para expor recursos.
-19.  Maturidade de Richardson - é um modelo que descreve níveis de maturidade para implementação de APIs RESTful.
-20.  Padrões de Datas - são padrões de design para trabalhar com datas em sistemas distribuídos.
-21.  ISO 8601-UTC - é um padrão de formato de data e hora.
-22.  Comunicação por Coreografia - é um padrão de design onde os componentes de um sistema colaboram para executar uma tarefa, sem a necessidade de um coordenador central.
-23.  Padrão JWT Autenticação: O padrão JWT (JSON Web Token) é uma forma segura de transmitir informações entre duas partes. É utilizado principalmente para autenticação e autorização. O JWT é um token autocontido que contém informações sobre o usuário, como nome e permissões. O token é assinado digitalmente e é enviado ao servidor em cada solicitação. O servidor pode então verificar a assinatura para garantir que o token é válido e que as informações do usuário são confiáveis.
-24.  Modelos Autorização: O modelo de autorização é uma técnica utilizada para controlar o acesso a recursos em um sistema. Existem vários modelos de autorização, como o modelo baseado em funções, o modelo baseado em políticas e o modelo baseado em atributos. Cada um desses modelos oferece diferentes níveis de granularidade para o controle de acesso.
-25.  Broker Pattern: O padrão Broker é um padrão arquitetural utilizado para implementar sistemas distribuídos. O padrão utiliza um intermediário (broker) para controlar e coordenar a comunicação entre os diferentes componentes do sistema. O broker pode ser responsável por várias tarefas, como roteamento de mensagens, transformação de dados e gerenciamento de filas.
+30.  Spring Boot: Spring Boot é um framework para criação de aplicações Java de forma rápida e fácil, utilizando o ecossistema do Spring. O objetivo do Spring Boot é facilitar a configuração e o desenvolvimento de aplicações, fornecendo uma maneira simples de iniciar um projeto Spring com um mínimo de configuração.
     
-26.  Mediator Pattern: O padrão Mediator é um padrão comportamental que permite que os objetos se comuniquem entre si sem se acoplarem diretamente. Nesse padrão, um objeto atua como intermediário entre outros objetos, facilitando a comunicação entre eles. O padrão é útil para sistemas complexos, onde muitos objetos precisam se comunicar entre si.
+31.  Spring Data JPA: Spring Data JPA é um subprojeto do Spring que fornece uma camada de acesso a dados com suporte a JPA (Java Persistence API). Ele permite que os desenvolvedores criem aplicativos com menos código, com recursos como consultas dinâmicas, suporte a transações, paginação e ordenação.
     
-27.  Access Token Pattern: O padrão Access Token é uma técnica utilizada para controlar o acesso a recursos em um sistema distribuído. Quando um usuário faz login em um sistema, ele recebe um access token que é usado para autenticar solicitações posteriores. O token pode conter informações sobre as permissões do usuário e pode ser verificado em cada solicitação para garantir que o usuário tenha acesso aos recursos solicitados.
-
+32.  Spring Web: O Spring Web é um subprojeto do Spring Framework que fornece suporte para a criação de aplicativos web. Ele inclui recursos para processamento de solicitações HTTP, mapeamento de URLs, gerenciamento de sessões e muito mais.
+    
+33.  Spring Validation: O Spring Validation é uma biblioteca que fornece recursos para validação de dados em aplicativos Spring. Ele inclui um conjunto de anotações e classes de utilitários para validação de dados de entrada.
+    
+34.  Spring HATEOAS: O Spring HATEOAS é um subprojeto do Spring que fornece suporte para implementação do padrão HATEOAS (Hypermedia as the Engine of Application State). Ele permite que os desenvolvedores criem aplicativos RESTful que fornecem links para os recursos relacionados.
+    
+35.  Spring Security: O Spring Security é um subprojeto do Spring que fornece recursos para autenticação e autorização em aplicativos Spring. Ele inclui recursos como gerenciamento de usuários, controle de acesso baseado em regras, criptografia de senhas e muito mais.
+    
+36.  Spring AMQP: Spring AMQP é um subprojeto do Spring que fornece suporte para a implementação de aplicativos baseados em AMQP (Advanced Message Queuing Protocol). Ele inclui recursos para enviar e receber mensagens, gerenciamento de filas e muito mais.
+    
+37.  Spring Cloud Gateway: O Spring Cloud Gateway é um subprojeto do Spring Cloud que fornece um gateway de API que pode ser usado para rotear solicitações para vários serviços. Ele inclui recursos como roteamento baseado em regras, balanceamento de carga, segurança e muito mais.
+    
+38.  Spring Cloud Netflix Eureka: O Spring Cloud Netflix Eureka é um subprojeto do Spring Cloud que fornece um serviço de registro e descoberta de serviços. Ele permite que os aplicativos sejam implantados dinamicamente em um ambiente de nuvem distribuído.
+    
+39.  Spring Cloud Resilience4j: O Spring Cloud Resilience4j é um subprojeto do Spring Cloud que fornece recursos para lidar com falhas em aplicativos distribuídos. Ele inclui recursos como tolerância a falhas, limitação de taxa, circuit breaker e muito mais.
+    
+40.  Spring Actuator: O Spring Actuator é um subprojeto do Spring que fornece recursos para monitoramento e gerenciamento de aplicativos Spring. Ele inclui recursos como verificação de integridade, exposição de métricas, gerenciamento de beans e muito mais.
+-   Spring Cloud Gateway: é uma biblioteca do Spring que fornece uma solução de gateway para aplicativos baseados em nuvem. Ele oferece recursos como roteamento, filtragem e monitoramento de tráfego de rede.
+    
+-   Spring Cloud Netflix Eureka: é um servidor de registro de serviços para a infraestrutura em nuvem. Ele ajuda na identificação e localização de serviços distribuídos para que possam se comunicar uns com os outros.
+    
+-   Spring Cloud Resilience4j: é uma biblioteca para implementação de tolerância a falhas e resiliência em aplicativos baseados em nuvem. Ele fornece recursos como limitação de taxa, bulkhead e circuit breaker.
+    
+-   Spring Actuator: é uma extensão do Spring Boot que adiciona recursos para monitoramento, gerenciamento e diagnóstico de aplicativos em produção.
+    
+-   Spring Cloud Config: é uma biblioteca que fornece recursos para a configuração externa de aplicativos baseados em nuvem. Ele ajuda a gerenciar e distribuir as configurações de aplicativos em vários ambientes.
+    
+-   Spring Utils: é um conjunto de classes utilitárias do Spring que ajudam no desenvolvimento de aplicativos. Ele inclui classes para manipulação de coleções, data e hora, IO, entre outros.
+    
+-   Serializações: é um recurso do Spring que permite a conversão de objetos Java em formatos de dados como JSON, XML e outros.
+    
+-   Filters em API REST: é uma funcionalidade do Spring que permite a aplicação de filtros em requisições HTTP recebidas por um aplicativo RESTful.
+    
+-   Customizações de Validações: é uma funcionalidade do Spring que permite a personalização das validações de campos de formulários em aplicativos web.
+    
+-   APIs: é uma funcionalidade do Spring que permite a criação de interfaces de programação de aplicativos (APIs) em aplicativos baseados em nuvem.
+    
+-   Spring Framework: é um framework do Spring que fornece recursos para o desenvolvimento de aplicativos Java.
+    
+-   Core Container: é uma parte do Spring Framework que fornece recursos para a injeção de dependência e inversão de controle.
+    
+-   Inversão de Controle: é um princípio de programação em que o controle da criação e gestão de objetos é transferido para um contêiner.
+    
+-   Injeção de Dependência: é um padrão de projeto de software em que as dependências são injetadas em uma classe em vez de serem criadas por ela.
+    
+-   Beans: são objetos gerenciados pelo contêiner do Spring que são criados e gerenciados por ele.
+    
+-   Métodos Produtores: são métodos que produzem beans gerenciados pelo contêiner do Spring.
+    
+-   Estereótipos do Spring: são anotações que ajudam a definir o papel de uma classe em um aplicativo Spring.
+    
+-   Spring Logging: é um recurso do Spring que permite a criação de logs de aplicativos. Ele usa o framework de log logback como padrão.
