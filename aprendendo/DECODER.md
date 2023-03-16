@@ -423,3 +423,35 @@ public class Service {
 ```
 
 Nesse exemplo, o método "doSomething" usa um OAuth2RestTemplate do Spring para fazer uma solicitação HTTP a uma API protegida. O OAuth2RestTemplate é configurado com as credenciais de autenticação e é usado para fazer a solicitação. Dessa forma, a autenticação é gerenciada de forma
+<hr>
+
+1.  Event Driven - é um modelo de programação onde a comunicação entre componentes é baseada em eventos, onde um componente dispara um evento que é recebido e processado por outro componente.
+2.  Event Notification Pattern - é um padrão de design onde um objeto registra-se para receber notificações quando um evento ocorre.
+3.  Event Carried State Transfer Pattern - é um padrão de design onde o estado do objeto é incluído no evento, permitindo que outros componentes recuperem o estado sem acessar diretamente o objeto.
+4.  API Gateway Pattern - é um padrão de design onde um único ponto de entrada é usado para acessar várias APIs. O gateway pode executar tarefas como autenticação, autorização, balanceamento de carga e caching.
+5.  API Composition Pattern - é um padrão de design onde várias APIs são combinadas para criar uma API unificada.
+6.  SAGA Pattern - é um padrão de design para controlar transações distribuídas em sistemas distribuídos.
+7.  Cross-Cutting - é um termo usado para descrever funcionalidades que são comuns a várias partes de um sistema, como autenticação e autorização.
+8.  Service Registry Discovery - é um padrão de design onde um registro central de serviços é mantido e consultado para descobrir serviços disponíveis em um sistema distribuído.
+9.  Global Configuration - é um padrão de design onde as configurações do sistema são armazenadas em um local central e compartilhadas por todos os componentes do sistema.
+10.  Circuit Breaker - é um padrão de design para lidar com falhas em sistemas distribuídos, onde um componente verifica se um serviço está disponível e, se não estiver, o circuit breaker interrompe temporariamente o acesso ao serviço.
+11.  Retry - é um padrão de design onde uma operação falha, mas é tentada novamente em um período de tempo determinado.
+12.  Log Aggregation - é um padrão de design onde logs de vários componentes de um sistema são coletados e agregados em um local central.
+13.  Controle de Métricas - é um padrão de design onde as métricas de desempenho são coletadas e monitoradas para detectar possíveis problemas no sistema.
+14.  Padrão JWT Autenticação - é um padrão de design de autenticação baseado em tokens JWT (JSON Web Tokens).
+15.  Modelos Autorização - são modelos de autorização usados para controlar o acesso a recursos em sistemas distribuídos.
+16.  Database per Service - é um padrão de design onde cada serviço possui seu próprio banco de dados.
+17.  Shared Database - é um padrão de design onde vários serviços compartilham o mesmo banco de dados.
+18.  API RESTful - é um estilo arquitetural para sistemas distribuídos que utiliza o protocolo HTTP e a abordagem CRUD para expor recursos.
+19.  Maturidade de Richardson - é um modelo que descreve níveis de maturidade para implementação de APIs RESTful.
+20.  Padrões de Datas - são padrões de design para trabalhar com datas em sistemas distribuídos.
+21.  ISO 8601-UTC - é um padrão de formato de data e hora.
+22.  Comunicação por Coreografia - é um padrão de design onde os componentes de um sistema colaboram para executar uma tarefa, sem a necessidade de um coordenador central.
+23.  Padrão JWT Autenticação: O padrão JWT (JSON Web Token) é uma forma segura de transmitir informações entre duas partes. É utilizado principalmente para autenticação e autorização. O JWT é um token autocontido que contém informações sobre o usuário, como nome e permissões. O token é assinado digitalmente e é enviado ao servidor em cada solicitação. O servidor pode então verificar a assinatura para garantir que o token é válido e que as informações do usuário são confiáveis.
+24.  Modelos Autorização: O modelo de autorização é uma técnica utilizada para controlar o acesso a recursos em um sistema. Existem vários modelos de autorização, como o modelo baseado em funções, o modelo baseado em políticas e o modelo baseado em atributos. Cada um desses modelos oferece diferentes níveis de granularidade para o controle de acesso.
+25.  Broker Pattern: O padrão Broker é um padrão arquitetural utilizado para implementar sistemas distribuídos. O padrão utiliza um intermediário (broker) para controlar e coordenar a comunicação entre os diferentes componentes do sistema. O broker pode ser responsável por várias tarefas, como roteamento de mensagens, transformação de dados e gerenciamento de filas.
+    
+26.  Mediator Pattern: O padrão Mediator é um padrão comportamental que permite que os objetos se comuniquem entre si sem se acoplarem diretamente. Nesse padrão, um objeto atua como intermediário entre outros objetos, facilitando a comunicação entre eles. O padrão é útil para sistemas complexos, onde muitos objetos precisam se comunicar entre si.
+    
+27.  Access Token Pattern: O padrão Access Token é uma técnica utilizada para controlar o acesso a recursos em um sistema distribuído. Quando um usuário faz login em um sistema, ele recebe um access token que é usado para autenticar solicitações posteriores. O token pode conter informações sobre as permissões do usuário e pode ser verificado em cada solicitação para garantir que o usuário tenha acesso aos recursos solicitados.
+
