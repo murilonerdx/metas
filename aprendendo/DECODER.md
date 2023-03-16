@@ -481,3 +481,330 @@ Nesse exemplo, o método "doSomething" usa um OAuth2RestTemplate do Spring para 
 -   Estereótipos do Spring: são anotações que ajudam a definir o papel de uma classe em um aplicativo Spring.
     
 -   Spring Logging: é um recurso do Spring que permite a criação de logs de aplicativos. Ele usa o framework de log logback como padrão.
+
+Observabilidade com ELK:
+
+Descrição: ELK é uma sigla que representa três ferramentas de código aberto: Elasticsearch, Logstash e Kibana, que juntas fornecem uma solução completa para análise e visualização de dados de log e métricas em tempo real. A observabilidade com ELK é muito utilizada em ambientes de microservices para monitoramento e resolução de problemas.
+
+Exemplo em código:
+
+Para utilizar o ELK em um projeto Spring Boot, pode-se adicionar as seguintes dependências ao arquivo pom.xml:
+
+```maven
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-log4j2</artifactId>
+</dependency>
+```
+
+```maven
+<dependency>
+   <groupId>net.logstash.logback</groupId>
+   <artifactId>logstash-logback-encoder</artifactId>
+   <version>5.0</version>
+</dependency>
+```
+
+Em seguida, deve-se configurar o log4j2.xml para que as mensagens de log sejam enviadas para o Logstash:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+   <Appenders>
+      <Socket name="logstash" host="localhost" port="5000">
+         <JsonLayout />
+      </Socket>
+   </Appenders>
+   <Loggers>
+      <Root level="info">
+         <AppenderRef ref="logstash" />
+      </Root>
+   </Loggers>
+</Configuration>
+```
+Log4J2:
+
+Descrição: O Log4J2 é uma biblioteca de log para Java que fornece recursos avançados para logging de mensagens em aplicações. Ele oferece configurações flexíveis, filtros, formatação personalizada, rotação de arquivo, integração com outras bibliotecas, entre outros recursos.
+
+Exemplo em código:
+
+Para utilizar o Log4J2 em um projeto Spring Boot, pode-se adicionar a seguinte dependência ao arquivo pom.xml:
+
+```maven
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-log4j2</artifactId>
+</dependency>
+```
+
+Em seguida, deve-se configurar o log4j2.xml para que as mensagens de log sejam exibidas em diferentes níveis (trace, debug, info, warn, error):
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+   <Appenders>
+      <Console name="Console" target="SYSTEM_OUT">
+         <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+      </Console>
+   </Appenders>
+   <Loggers>
+      <Root level="info">
+         <AppenderRef ref="Console" />
+      </Root>
+   </Loggers>
+</Configuration>
+```
+
+**Deploy Arquitetura de Microservices**
+
+O deploy de microservices pode ser uma tarefa complexa, devido ao grande número de serviços envolvidos e à necessidade de manter a disponibilidade do sistema durante todo o processo. Nesse contexto, é importante escolher uma estratégia de deploy adequada e ferramentas que facilitem o processo. Algumas ferramentas úteis para o deploy de microservices em Java são: Docker, Kubernetes, Jenkins, GitLab CI/CD, entre outras.
+
+Exemplo de deploy com Docker Compose:
+```yaml
+version: '3'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/mydb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres` 
+```
+**Log Aggregation Pattern**
+
+O Log Aggregation Pattern consiste em centralizar os logs de uma aplicação em um único local, para facilitar a análise e monitoramento do sistema. Algumas ferramentas que podem ser usadas para implementar o Log Aggregation Pattern são o Elasticsearch, Logstash e Kibana, juntos conhecidos como ELK Stack.
+
+Exemplo de configuração de logback para enviar logs para o ELK Stack:
+```maven
+<appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+    <destination>localhost:5044</destination>
+    <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+</appender>
+
+<root level="INFO">
+    <appender-ref ref="logstash" />
+</root>
+``` 
+
+**Config Ambientes Dev/Prod**
+
+Em um projeto com microservices, é comum que sejam utilizados diferentes ambientes, como desenvolvimento, produção, homologação, etc. Para cada ambiente, é necessário ter diferentes configurações, como endereço de banco de dados, chave de API, etc. É importante ter uma forma de gerenciar e separar essas configurações.
+
+Exemplo de configuração do Spring Boot para diferentes ambientes:
+```bash
+spring.profiles.active=dev
+spring.datasource.url=jdbc:postgresql://localhost:5432/mydb
+spring.datasource.username=myuser
+spring.datasource.password=mypassword` 
+```
+**Padrão ECS Logs**
+
+O Padrão ECS Logs é uma especificação de formato para os logs gerados pelos serviços que seguem a arquitetura de microservices. O objetivo é padronizar a estrutura dos logs e facilitar a sua análise e monitoramento.
+
+Exemplo de log seguindo o padrão ECS:
+
+```less
+{
+  "@timestamp": "2019-12-13T17:09:12.000Z",
+  "log.level": "INFO",
+  "service.name": "product-service",
+  "service.version": "1.0.0",
+  "transaction.id": "123456",
+  "message": "Product created",
+  "product.id": "789",
+  "product.name": "Notebook",
+  "product.price": 2000
+}
+```
+
+
+**Análise de Métricas**
+
+Análise de métricas é um processo importante para monitorar e melhorar a performance de uma aplicação. O Spring Actuator é uma biblioteca que permite obter informações sobre a aplicação, como a quantidade de memória utilizada e os endpoints disponíveis, e expõe esses dados em um formato fácil de ler. Além disso, o Micrometer é uma biblioteca que permite criar métricas personalizadas para monitorar o comportamento da aplicação em tempo real.
+
+**Exemplo em código:**
+
+Para configurar o Spring Actuator, adicione a seguinte dependência ao `pom.xml`:
+
+```xml
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
+
+Para habilitar os endpoints do Spring Actuator, adicione a seguinte propriedade ao arquivo `application.properties`:
+
+```properties
+management.endpoints.web.exposure.include=*
+```
+Em seguida, acesse `http://localhost:8080/actuator` para visualizar os endpoints disponíveis.
+
+**Arquitetura em Cloud**
+
+A arquitetura em cloud se refere a um modelo de arquitetura que utiliza serviços de computação em nuvem para desenvolver, testar e implantar aplicativos. O Spring Cloud é uma plataforma que oferece uma série de ferramentas para desenvolver aplicativos em cloud, como o Spring Cloud Netflix, que fornece serviços de descoberta de serviço e balanceamento de carga.
+
+**Exemplo em código:**
+
+Para configurar o Spring Cloud, adicione a seguinte dependência ao `pom.xml`:
+```xml
+`<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+```
+
+Em seguida, adicione a seguinte anotação à classe principal da aplicação:
+
+```java
+@EnableDiscoveryClient
+``` 
+
+Por fim, adicione as seguintes propriedades ao arquivo `application.properties`:
+
+```bash
+spring.application.name=my-application
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
+```
+
+**Elasticsearch**
+
+Elasticsearch é um mecanismo de busca e análise de dados distribuído e escalável que pode ser usado para armazenar, pesquisar e analisar dados. O Spring Data Elasticsearch é uma biblioteca que permite a integração do Elasticsearch com o Spring.
+
+**Exemplo em código:**
+
+Para configurar o Spring Data Elasticsearch, adicione a seguinte dependência ao `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+</dependency>
+``` 
+
+Em seguida, defina a configuração do Elasticsearch no arquivo `application.properties`:
+
+propertiesCopy code
+
+```bash
+spring.data.elasticsearch.cluster-name=my-application
+spring.data.elasticsearch.cluster-nodes=localhost:9300
+```
+
+Por fim, crie uma classe de repositório que estenda `ElasticsearchRepository` e use os métodos fornecidos pela biblioteca para acessar o Elasticsearch.
+
+
+Ports and Adapters Pattern:
+
+O padrão Ports and Adapters, também conhecido como Hexagonal Architecture, é um padrão de arquitetura de software que visa separar a lógica de negócios do sistema das implementações técnicas externas, como banco de dados, serviços externos e interfaces do usuário. Esse padrão visa facilitar a manutenção, a modificação e a evolução do sistema.
+
+Exemplo em código:
+
+Abaixo está um exemplo simples de uma classe de serviço que usa o padrão Ports and Adapters para separar sua lógica de negócios da camada de persistência:
+
+kotlinCopy code
+
+```java
+public interface UserRepository {
+    User findById(Long id);
+}
+
+public class UserService {
+    private final UserRepository userRepository;
+    
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    
+    public User getUser(Long userId) {
+        return userRepository.findById(userId);
+    }
+}
+``` 
+
+Encrypt Config Variables:
+
+O Encrypt Config Variables é um padrão de segurança que visa proteger informações sensíveis, como senhas e chaves de API, em arquivos de configuração. Isso é feito por meio da criptografia dessas informações antes de armazená-las em um arquivo de configuração.
+
+Exemplo em código:
+
+Abaixo está um exemplo de como podemos usar a biblioteca Jasypt para criptografar informações sensíveis em um arquivo de propriedades do Spring:
+
+```java
+@Configuration
+public class AppConfig {
+    
+    @Bean
+    public StringEncryptor stringEncryptor() {
+        PooledPBEStringEncryptor encryptor = new PooledPBEStringEncryptor();
+        encryptor.setAlgorithm("PBEWithMD5AndDES");
+        encryptor.setPassword("mySecretPassword");
+        return encryptor;
+    }
+    
+    @Bean
+    public PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
+        configurer.setPropertySources(new EncryptablePropertiesPropertySources(new ResourcePropertySource("classpath:config.properties"), stringEncryptor()));
+        return configurer;
+    }
+}
+```
+
+ELK Beats:
+
+ELK Beats é uma ferramenta open-source desenvolvida pela Elastic para enviar dados de diferentes fontes para o stack ELK (Elasticsearch, Logstash, Kibana) para análise e visualização.
+
+Exemplo em código:
+
+Abaixo está um exemplo de configuração do Filebeat para enviar logs para o Elasticsearch:
+
+luaCopy code
+```lua
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/*.log
+output.elasticsearch:
+  hosts: ["http://localhost:9200"]` 
+```
+Boards Kibana:
+
+O Kibana é uma plataforma de visualização de dados open-source da Elastic que permite a criação de painéis (boards) para monitorar e analisar dados.
+
+Exemplo em código:
+
+Abaixo está um exemplo de criação de um painel no Kibana para monitorar o tráfego de rede:
+
+```bash
+GET /_search
+{
+    "size": 0,
+    "aggs": {
+        "by_ip": {
+            "terms": {
+                "field": "source.ip"
+            }
+        },
+        "by_location": {
+            "terms": {
+                "field": "source.geoip.country_name"
+            }
+        }
+    }
+}
+```
