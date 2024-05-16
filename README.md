@@ -42,7 +42,6 @@
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
 # Plano de Estudos para Engenheiro de Software Excepcional
 
 ## Fundamentos da Computação 🖥️
@@ -78,4 +77,5 @@
 ## Desenvolvimento Pessoal 🌟
 - Habilidades de Comunicação: Aprimore suas habilidades de comunicação verbal e escrita.
 - Aprendizado Contínuo: Mantenha-se atualizado com as últimas tendências e tecnologias da indústria.
-- Colaboração e Trabalho em Equipe: Pratique t
+- Colaboração e Trabalho em Equipe: Pratique trabalhar em equipe e resolver problemas em grupo.
+
