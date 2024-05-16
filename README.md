@@ -43,14 +43,39 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2> :book: MBA em andamento </h2>
+# Plano de Estudos para Engenheiro de Software Excepcional
 
-<p>Aqui estão algumas das metas que não necessarimante precisam se realizar, porém é algo que quero fazer e especializar para um avanço primordial na carreira e no conhecimento pessoal.
+## Fundamentos da Computação 🖥️
+- Algoritmos e Estruturas de Dados: Livros como "Algorithms" de Sedgewick e Wayne são ótimos.
+- Teoria da Computação: Estude sobre autômatos, linguagens formais e complexidade computacional.
+- Sistemas Operacionais: Compreenda os princípios por trás dos sistemas operacionais modernos.
 
-<ul>
-<li><b>MBA em CYBER SECURITY</b></li>
-<li> Começa 24/04/2024</li>
-</ul>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdOP-PqsEbz_8PdGrtguaDM1yBTbwvgFBASQ&usqp=CAU" alt="CYBER SECURITY" style="max-width:100%;"></p>
+## Linguagens de Programação 💻
+- Java (você já está familiarizado, mas aprofunde seus conhecimentos).
+- Além de Java, familiarize-se com pelo menos uma linguagem funcional como Python, JavaScript ou Kotlin.
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+## Desenvolvimento de Software 🛠️
+- Metodologias Ágeis: Scrum, Kanban, XP.
+- Práticas de Desenvolvimento: TDD (Desenvolvimento Orientado a Testes), CI/CD (Integração Contínua e Entrega Contínua).
+- Arquitetura de Software: Padrões de design, princípios SOLID, arquiteturas como microservices e monolitos.
+- Design Patterns: Livros como "Design Patterns: Elements of Reusable Object-Oriented Software" são essenciais.
+
+## Ferramentas e Tecnologias 🛠️
+- Controle de Versão: Git.
+- IDEs: IntelliJ IDEA, Eclipse.
+- Frameworks: Spring (Spring Boot, Spring MVC), Hibernate (ou JPA), Angular/React/Vue.js para o frontend.
+- Bancos de Dados: SQL (MySQL, PostgreSQL) e NoSQL (MongoDB, Cassandra).
+- Containers: Docker, Kubernetes.
+- Serviços em Nuvem: AWS, Azure, Google Cloud.
+- DevOps: Jenkins, Ansible, Terraform.
+
+## Conceitos Avançados 🚀
+- Segurança da Informação: Criptografia, OWASP Top 10.
+- Machine Learning e Inteligência Artificial: Noções básicas sobre como aplicar algoritmos de ML/AI em projetos.
+- Computação em Nuvem: Arquiteturas serverless, serviços gerenciados.
+- Internet das Coisas (IoT): Conceitos básicos sobre sensores, redes e plataformas IoT.
+
+## Desenvolvimento Pessoal 🌟
+- Habilidades de Comunicação: Aprimore suas habilidades de comunicação verbal e escrita.
+- Aprendizado Contínuo: Mantenha-se atualizado com as últimas tendências e tecnologias da indústria.
+- Colaboração e Trabalho em Equipe: Pratique t
